@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пирамида чисел</title>
+</head>
+<body>
+  <pre id="pyramid"></pre>
+  <script>
+    function buildNumberPyramid(height) {
+  let pyramid = '';
+
+  for (let i = 1; i <= height; i++) {
+    for (let j = 1; j <= i; j++) {
+      pyramid += j;
+    }
+    pyramid += '\n'; // Переход на новую строку
+  }
+
+  return pyramid;
+}
+
+// Пример использования:
+let height = 5;
+console.log(buildNumberPyramid(height));
+    document.getElementById('pyramid').textContent = buildNumberPyramid(5);
+  </script>
+</body>
+</html>
